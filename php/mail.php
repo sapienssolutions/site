@@ -3,7 +3,7 @@
 /* =====================================================
  * change this to the email you want the form to send to
  * ===================================================== */
-$email_to = "you@company.pw"; 
+$email_to = "sapienssolu@gmail.com"; 
 $email_from = "webmaster@company.pw"; // must be different than $email_from 
 $email_subject = "Contact Form submitted";
 
@@ -62,9 +62,9 @@ if(isset($_POST['email']))
         return str_replace($bad, "", $string);
     }
 
-    $email_message .= "Name: ".clean_string($name)."\n";
+    $email_message .= "Nome: ".clean_string($name)."\n";
     $email_message .= "Email: ".clean_string($email)."\n";
-    $email_message .= "Message: ".clean_string($message)."\n";
+    $email_message .= "Mensagem: ".clean_string($message)."\n";
 
     // create email headers
     $headers = 'From: '.$email_from."\r\n".
@@ -77,7 +77,7 @@ if(isset($_POST['email']))
 
     else 
     {
-        echo json_encode(array('success'=>0, 'message'=>'An error occured. Please try again later.')); 
+        echo json_encode(array('success'=>0, 'message'=>'An error occured. ] try again later.')); 
         die();        
     }
 }
